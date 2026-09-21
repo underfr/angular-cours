@@ -19,12 +19,8 @@ export const routes: Routes = [
     loadComponent: ()=>import('./pages/contact/contact').then(m => m.Contact),
   },
   {
-    path: 'exercices/text-interpolation',
-    loadComponent: ()=>import('./pages/exercices/text-interpolation-exercice/text-interpolation-exercice').then(m => m.TextInterpolationExercice)
-  },
-  {
-    path: 'exercices/attribute-binding',
-    loadComponent: ()=>import('./pages/exercices/attribute-binding-exercice/attribute-binding-exercice').then(m => m.AttributeBindingExercice)
+    path: 'exercices',
+    loadChildren: ()=> import('./pages/exercices/exercices.routes').then(m=>m.EXERCICES_ROUTES)
   },
   {
     path: '**',
