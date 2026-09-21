@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, signal} from '@angular/core';
 
 @Component({
   imports: [],
@@ -7,14 +7,15 @@ import { Component } from '@angular/core';
   templateUrl: './event-binding-exercice.html',
 })
 export class EventBindingExercice {
+  keyPressed:string = ''
+  isButtonDisabled= signal(false)
+  listFriendsCreationStatus:string= 'Aucun ami'
   constructor() {
     setTimeout(()=>{
-      this.isButtonDisabled = true
+      this.isButtonDisabled.set(true)
     }, 3000)
   }
-  keyPressed:string = ''
-  isButtonDisabled:boolean=false
-  listFriendsCreationStatus:string= 'Aucun ami'
+
   onInputChange(event: Event){
     const data = event.target as HTMLInputElement
     this.keyPressed = data.value
