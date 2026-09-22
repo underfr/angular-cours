@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import {NgClass} from '@angular/common';
+import {NgClass, NgStyle} from '@angular/common';
 
 @Component({
   imports: [
-    NgClass
+    NgClass,
+    NgStyle
   ],
   selector: 'app-directives',
   styleUrl: './directives.css',
@@ -13,6 +14,7 @@ export class Directives {
   isShown:boolean = false
   count:number = 0
   nbClick:number[] = []
+  textColor:string = 'blue'
   showDetail():void{
     this.isShown = !this.isShown
     this.counter()

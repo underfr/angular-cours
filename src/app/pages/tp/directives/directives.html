@@ -6,7 +6,7 @@
 </button>
 
 @if (isShown) {
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum consequat mauris, pretium lobortis est lobortis ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque metus massa, ullamcorper a dictum eget, luctus sed nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae suscipit neque, id placerat erat. Proin a dolor posuere, aliquam odio et, interdum metus. Fusce consequat quam non dui volutpat malesuada. Phasellus quis lorem ultricies, gravida neque sed, sodales mi. Suspendisse lacinia dictum mauris, non venenatis felis convallis nec. Aenean in leo sapien. Sed pretium nibh vel nulla sodales fermentum. Pellentesque condimentum, arcu eu tincidunt elementum, urna nunc rhoncus diam, id luctus magna ante sed est. Praesent at neque mi.</p>
+  <p [ngStyle]="{ 'color': textColor }">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum consequat mauris, pretium lobortis est lobortis ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque metus massa, ullamcorper a dictum eget, luctus sed nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae suscipit neque, id placerat erat. Proin a dolor posuere, aliquam odio et, interdum metus. Fusce consequat quam non dui volutpat malesuada. Phasellus quis lorem ultricies, gravida neque sed, sodales mi. Suspendisse lacinia dictum mauris, non venenatis felis convallis nec. Aenean in leo sapien. Sed pretium nibh vel nulla sodales fermentum. Pellentesque condimentum, arcu eu tincidunt elementum, urna nunc rhoncus diam, id luctus magna ante sed est. Praesent at neque mi.</p>
 }
 
 @for (item of nbClick; track item) {
