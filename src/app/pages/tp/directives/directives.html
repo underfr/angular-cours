@@ -1,0 +1,15 @@
+<div class="flex flex-col max-w-4xl mx-auto m-10">
+  <h2 class="text-2xl text-primary text-center">TP Directives</h2>
+<button class="btn btn-primary"
+        (click)="showDetail()">
+  {{ isShown ? 'Masquer les détails' : 'Afficher les détails' }}
+</button>
+
+@if (isShown) {
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum consequat mauris, pretium lobortis est lobortis ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque metus massa, ullamcorper a dictum eget, luctus sed nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae suscipit neque, id placerat erat. Proin a dolor posuere, aliquam odio et, interdum metus. Fusce consequat quam non dui volutpat malesuada. Phasellus quis lorem ultricies, gravida neque sed, sodales mi. Suspendisse lacinia dictum mauris, non venenatis felis convallis nec. Aenean in leo sapien. Sed pretium nibh vel nulla sodales fermentum. Pellentesque condimentum, arcu eu tincidunt elementum, urna nunc rhoncus diam, id luctus magna ante sed est. Praesent at neque mi.</p>
+}
+
+@for (item of nbClick; track item) {
+  <p [ngClass]="{ 'badge badge-primary': item>=5}">{{ item }}</p>
+}
+</div>
