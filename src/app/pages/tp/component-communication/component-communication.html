@@ -1,0 +1,3 @@
+<h2 class="text-3xl font-bold text-center mt-6 text-primary">TP Component Communication</h2>
+<app-active-user [userName]="currentUser.name" [userAge]="currentUser.age" [userId]="currentUser.id"></app-active-user>
+<app-user-data (notify)="handleNotification($event)"></app-user-data>

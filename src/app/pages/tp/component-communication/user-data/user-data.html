@@ -1,0 +1,35 @@
+<div class="flex justify-center p-6">
+  <div class="card w-full max-w-md bg-base-100 shadow-xl">
+    <div class="card-body">
+      <h2 class="card-title text-2xl">User Data</h2>
+
+      <form (ngSubmit)="handleSubmit()">
+        <fieldset class="fieldset bg-base-200 border border-base-300 rounded-box p-4 gap-3">
+          <label class="label" for="userName">Nom</label>
+          <input
+            id="userName"
+            type="text"
+            class="input w-full"
+            placeholder="Votre nom"
+            [(ngModel)]="userName"
+            name="userName"
+          />
+
+          <label class="label" for="userAge">Âge</label>
+          <input
+            id="userAge"
+            type="number"
+            class="input w-full"
+            placeholder="Votre âge"
+            [(ngModel)]="userAge"
+            name="userAge"
+          />
+
+          <button type="submit" class="btn btn-primary mt-4 w-full">
+            MAJ des Data
+          </button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

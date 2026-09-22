@@ -1,0 +1,26 @@
+@if (userName && userAge && userId) {
+<div class="flex justify-center p-6">
+  <div class="card w-full max-w-md bg-base-300 shadow-xl">
+    <div class="card-body">
+      <h2 class="card-title text-2xl">Active User</h2>
+
+      <p class="text-sm opacity-70">Affichage des données :</p>
+
+      <ul class="list bg-base-100 rounded-box">
+        <li class="list-row">
+          <span class="font-semibold opacity-60">Nom</span>
+          <span>{{ userName }}</span>
+        </li>
+        <li class="list-row">
+          <span class="font-semibold opacity-60">Âge</span>
+          <span>{{ userAge }} ans</span>
+        </li>
+        <li class="list-row">
+          <span class="font-semibold opacity-60">ID</span>
+          <span class="badge badge-neutral font-mono">{{ userId }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+}
