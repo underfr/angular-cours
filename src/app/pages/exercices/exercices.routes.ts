@@ -24,5 +24,9 @@ export const EXERCICES_ROUTES: Route[] = [
   {
     path: 'observables-simple',
     loadComponent: ()=>import('./observables-simple/observables-simple').then(m=>m.ObservablesSimple)
+  },
+  {
+    path: 'signals',
+    loadComponent: ()=>import('./signals/signals').then(m=>m.Signals)
   }
 ]
