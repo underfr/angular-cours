@@ -20,5 +20,9 @@ export const EXERCICES_ROUTES: Route[] = [
   {
     path: 'random-user',
     loadComponent: ()=>import('./random-user-api/random-user-api').then(m=>m.RandomUserApi)
+  },
+  {
+    path: 'observables-simple',
+    loadComponent: ()=>import('./observables-simple/observables-simple').then(m=>m.ObservablesSimple)
   }
 ]
