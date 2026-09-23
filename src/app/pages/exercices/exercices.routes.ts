@@ -13,4 +13,12 @@ export const EXERCICES_ROUTES: Route[] = [
     path: 'event-binding',
     loadComponent: ()=>import('./event-binding-exercice/event-binding-exercice').then(m=>m.EventBindingExercice)
   },
+  {
+    path: 'meteo',
+    loadComponent: ()=>import('./meteo/meteo').then(m=>m.Meteo)
+  },
+  {
+    path: 'random-user',
+    loadComponent: ()=>import('./random-user-api/random-user-api').then(m=>m.RandomUserApi)
+  }
 ]
