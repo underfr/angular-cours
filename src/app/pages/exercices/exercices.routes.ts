@@ -28,5 +28,9 @@ export const EXERCICES_ROUTES: Route[] = [
   {
     path: 'signals',
     loadComponent: ()=>import('./signals/signals').then(m=>m.Signals)
+  },
+  {
+    path: 'validation-formulaire',
+    loadComponent: ()=>import('./validation-formulaire/validation-formulaire').then(m=>m.ValidationFormulaire)
   }
 ]
