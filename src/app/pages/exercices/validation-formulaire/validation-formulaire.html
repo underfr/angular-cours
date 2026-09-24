@@ -34,17 +34,6 @@
         </div>
 
         <div class="form-control">
-          <label class="label" for="password">
-            <span class="label-text">Password</span>
-          </label>
-          <input
-            id="password"
-            [(ngModel)]="password"
-            name="password"
-            type="password"
-            placeholder="*******"
-            class="input input-bordered w-full"
-          >
           <label class="label" for="phone">
             <span class="label-text">Phone</span>
           </label>
@@ -56,23 +45,43 @@
             placeholder="+33000000"
             class="input input-bordered w-full"
           >
+        </div>
 
-          <progress
-            class="progress w-full mt-2"
-            [class]="progressClass()"
-            [value]="score()"
-            max="5"
-          ></progress>
+        <div class="form-control">
+          <label class="label" for="password">
+            <span class="label-text">Password</span>
+          </label>
+          <input
+            id="password"
+            [(ngModel)]="password"
+            name="password"
+            [type]="showPassword() ? 'text': 'password'"
+            placeholder="*******"
+            class="input input-bordered w-full"
+          >
 
-          <ul class="mt-2 space-y-1">
+          <div class="flex items-center gap-4 mt-3">
+            <button type="button" class="btn btn-primary btn-sm" (click)="showPassword.update(s => !s)">
+              {{ showPassword() ? 'Hide password' : 'Show password'}}
+            </button>
+
+            <progress
+              class="progress flex-1"
+              [class]="progressClass()"
+              [value]="score()"
+              max="5"
+            ></progress>
+          </div>
+
+          <ul class="mt-3 space-y-1">
             @for (check of passwordChecks(); track $index) {
-              <li class="flex items-center gap-2 text-sm" [class]="check.valid ? 'text-success' : 'text-base-content/50'"><span class="font-bold">{{check.valid ? '✓' : '○'}}</span>
+              <li class="flex items-center gap-2 text-sm" [class]="check.valid ? 'text-success' : 'text-base-content/50'">
+                <span class="font-bold">{{check.valid ? '✓' : '○'}}</span>
                 {{check.label}}
               </li>
             }
           </ul>
         </div>
-
         <button type="submit" class="btn btn-primary mt-2" [disabled]="!isFormValid()">
           Sign up
         </button>
